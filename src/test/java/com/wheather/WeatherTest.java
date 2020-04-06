@@ -48,9 +48,9 @@ public class WeatherTest {
             assert restTemplate.getStatusCode().is2xxSuccessful();
             ResponseData getBody = restTemplate.getBody();
             assert getBody != null;
-            long getDaylight = commonServices.getDailyLight(getBody.getSunriseSunsetData().getSunrise(),
+            long getDaylightTime = commonServices.getDailyLight(getBody.getSunriseSunsetData().getSunrise(),
                     getBody.getSunriseSunsetData().getSunset());
-            actualDataList.add(new ActualData(city, getBody.getTempData().getTemp(), getDaylight));
+            actualDataList.add(new ActualData(city, getBody.getTempData().getTemp(), getDaylightTime));
         }
 
         ActualData actualData = Collections.max(actualDataList, Comparator.comparing(ActualData::getDayLightTime));
