@@ -1,0 +1,7 @@
+com\wheather\Application.class
+com\wheather\domain\TempData.class
+com\wheather\domain\ResponseData.class
+com\wheather\services\impl\CommonServicesImpl.class
+com\wheather\domain\SunriseSunsetData.class
+com\wheather\services\CommonServices.class
+com\wheather\domain\ActualData.class
